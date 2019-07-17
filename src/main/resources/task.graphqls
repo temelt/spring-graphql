@@ -1,0 +1,15 @@
+type Task {
+    id: ID!
+    title: String!
+    content: String!
+}
+
+# The Root Query for the application
+type Query {
+    tasks(count: Int, offset: Int): [Task]!
+}
+
+# The Root Mutation for the application
+type Mutation {
+    addTask(title: String!, text: String!) : Task!
+}
